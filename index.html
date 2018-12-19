@@ -5,15 +5,73 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Grinch Reto 3 | Rodrigo García</title>
-	<link rel="stylesheet" href="./public/css/vendor/bulma.min.css">
-	<link rel="stylesheet" href="./public/css/style.css">
+	<link rel="stylesheet" href="/public/css/vendor/bulma.min.css">
+	<link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
+	<section class="main-header">
+		<article>
+			<img src="./public/images/rodrigogarcia-logo.svg" alt="Rodrigo García Logo" class="logo">
+			<h1>Creador de Listas</h1>
+		</article>
+	</section>
+	<section class="container add-task">
+		<br>
+		<article>
+			<div class="content is-small notification">
+				<h2 class="title has-text-grey">Agrega una tarea</h2>
+				<div class="field">
+					<label for="name" class="label">Nombre de Tarea</label>
+					<input type="text" id="name" class="input">
+				</div>
+				<div class="field">
+					<label for="description" class="label">Descripción de Tarea</label>
+					<textarea name="description" id="description" cols="30" rows="10" class="textarea"></textarea>
+				</div>
+				<button class="button is-normal">Agregar</button>
+			</div>
+		</article>
+	</section>
+	<section class="container all-tasks">
+		<article class="table-container">
+			<h2 class="title has-text-grey has-text-centered">Todas las tareas</h2>
+			<table class="table is-fullwidth is-striped is-hoverable">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Nombre</th>
+						<th>Descripción</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="task-1">
+						<td>1</td>
+						<td>Primer Tarea</td>
+						<td>Mi descripción de la tarea</td>
+						<td>
+							<a href="#completada" class="button no-color">Completada</a>
+							<a href="#borrar" class="button is-danger">Borrar</a>
+						</td>
+					</tr>
+					<tr id="task-2">
+						<td>1</td>
+						<td>Primer Tarea</td>
+						<td>Mi descripción de la tarea</td>
+						<td>
+							<a href="#completada" class="button no-color">Completada</a>
+							<a href="#borrar" class="button is-danger">Borrar</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</article>
+	</section>
 	<script src="./public/js/vendor/jquery.js"></script>
 	<script src="./public/js/main.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			alert();
+			INDEX.init();
 		});
 	</script>
 </body>

@@ -51,7 +51,7 @@ gulp.task('sass', () => {
 gulp.task('concat-js', ()=>{
 	return gulp.src([$d_js])
 		.pipe(concat('main.min.js'))
-		.pipe(gulp.dest($js)
+		.pipe(gulp.dest($js))
 		.pipe(connect.reload())
 		.on('end', ()=>{
 			log('JS concatenado', 'yellow');

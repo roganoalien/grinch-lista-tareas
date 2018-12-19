@@ -1,0 +1,19 @@
+.all-tasks{
+	margin-top: 50px;
+	h2{
+		font-size: 20px;
+	}
+	.table-container{
+		background: rgba($c-black, .05);
+		padding: 20px 50px;
+		table{
+			background: transparent;
+			tr{
+				background: transparent !important;
+				&:hover{
+					background: rgba($c-black, .05) !important;
+				}
+			}
+		}
+	}
+}

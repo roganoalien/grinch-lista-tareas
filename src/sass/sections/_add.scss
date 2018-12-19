@@ -1,0 +1,11 @@
+.add-task{
+	input, textarea{
+		background: transparent;
+		box-shadow: none;
+		max-height: 80px;
+		&:focus{
+			border: 1px solid $c-purple;
+			box-shadow: 0 0 0 0.125em rgba($c-purple,.25);
+		}
+	}
+}
