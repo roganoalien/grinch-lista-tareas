@@ -1,9 +1,13 @@
 const INDEX = (function(){
 
-	const _initVars = ()=>{};
+	let _$n_input;
+
+	const _initVars = ()=>{
+		_$n_input = $('#name');
+	};
 
 	const _initEvents = ()=>{
-		// alert('Hola');
+		_$n_input.focus();
 	};
 
 	return {
