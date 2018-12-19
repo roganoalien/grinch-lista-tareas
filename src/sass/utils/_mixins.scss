@@ -1,0 +1,35 @@
+/************************
+ * FLEX CONTAINER MIXIN *
+ ************************/
+@mixin flex-container($algin: center, $direction: row, $justify: center, $wrap: nowrap) {
+    align-items: $algin;
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+}
+
+/******************
+ * POSITION MIXIN *
+ ******************/
+@mixin position-select($x, $y, $position: absolute, $left: true, $top: true) {
+    @if $left {
+        left: $x;
+    }
+    @else {
+        right: $x;
+    }
+
+    position: $position;
+
+    @if $top {
+        top: $y;
+    }
+    @else {
+        bottom: $y;
+    }
+
+    @if $position != absolute and $position != fixed {
+        @error "Position-select is mented to be used only with position absolute or fixed";
+    }
+}
