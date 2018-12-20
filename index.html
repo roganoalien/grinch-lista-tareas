@@ -7,6 +7,15 @@
 	<title>Grinch Reto 3 | Rodrigo García</title>
 	<link rel="stylesheet" href="./public/css/vendor/bulma.min.css">
 	<link rel="stylesheet" href="./public/css/style.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131144122-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-131144122-1');
+	</script>
 </head>
 <body>
 	<section class="main-header">
@@ -28,7 +37,7 @@
 					<label for="description" class="label">Descripción de Tarea</label>
 					<textarea name="description" id="description" cols="30" rows="10" class="textarea"></textarea>
 				</div>
-				<button class="button is-normal save">Agregar</button>
+				<button class="button is-normal save" onclick="ga('send', 'event', 'Create', 'Task', 'Lista de Tareas');">Agregar</button>
 			</div>
 		</article>
 	</section>

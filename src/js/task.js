@@ -19,8 +19,8 @@ const TASK = (function(){
 				<td class="t-name">${task.name}</td>
 				<td class="t-description">${task.description}</td>
 				<td>
-					<a href="#completada" class="button no-color update-this" onClick="INDEX.update(${task.id})">Completada</a>
-					<a href="#borrar" class="button is-danger delete-this" onClick="TASK.delete(${task.id})">Borrar</a>
+					<a href="#completada" class="button no-color update-this" onclick="INDEX.update(${task.id}); ga('send', 'event', 'Update', 'Task', 'Lista de Tareas');">Completada</a>
+					<a href="#borrar" class="button is-danger delete-this" onclick="TASK.delete(${task.id}); ga('send', 'event', 'Delete', 'Task', 'Lista de Tareas');">Borrar</a>
 				</td>
 			</tr>`
 		);
@@ -57,8 +57,8 @@ const TASK = (function(){
 						<td>${_item.name}</td>
 						<td>${_item.description}</td>
 						<td>
-							<a href="#completada" class="button no-color update-this" onClick="INDEX.update(${_item.id})">Completada</a>
-							<a href="#borrar" class="button is-danger delete-this" onClick="TASK.delete(${_item.id})">Borrar</a>
+							<a href="#completada" class="button no-color update-this" onclick="INDEX.update(${_item.id}); ga('send', 'event', 'Update', 'Task', 'Lista de Tareas');">Completada</a>
+							<a href="#borrar" class="button is-danger delete-this" onclick="TASK.delete(${_item.id}); ga('send', 'event', 'Delete', 'Task', 'Lista de Tareas');">Borrar</a>
 						</td>
 					</tr>`
 				);
